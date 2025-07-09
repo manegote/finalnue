@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery - Rasil's Projects</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="header-container">
+        <div class="header-top">
+          <a href="index.html" class="logo">
+            <div class="logo-icon">RP</div>
+            <span class="logo-text">Rasil's Projects</span>
+          </a>
+          <button class="mobile-menu" aria-label="Menu">
+            <svg
+              class="icon"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <nav class="nav">
+          <ul class="nav-list">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="projects.html" class="nav-link">Projects</a></li>
+            <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb">
+        <a href="index.html">Home</a> / <span>Gallery</span>
+      </nav>
+
+      <div class="page-content">
+        <h1 class="page-title">Project Gallery</h1>
+        <p class="page-description">
+          Visual documentation of projects, designs, PCBs, tools, and
+          components. Click any image to view fullscreen with download options.
+        </p>
+
+        <!-- Search and Filters -->
+        <div class="filter-section">
+          <div class="filter-header">
+            <svg
+              class="icon"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.414A1 1 0 013 6.707V4z"
+              ></path>
+            </svg>
+            <span>Filter Images</span>
+          </div>
+
+          <div class="filter-grid">
+            <div class="filter-item">
+              <label for="search">Search</label>
+              <div class="search-input">
+                <svg
+                  class="search-icon"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  ></path>
+                </svg>
+                <input
+                  type="search"
+                  id="search"
+                  placeholder="Search images..."
+                  class="form-input"
+                  autocomplete="off"
+                />
+                <div
+                  id="autocomplete-list"
+                  class="autocomplete-suggestions"
+                ></div>
+              </div>
+            </div>
+
+            <div class="filter-item">
+              <label for="category">Category</label>
+              <select id="category" class="form-select">
+                <option value="">All Categories</option>
+                <option value="Photos">Photos</option>
+                <option value="Designs">Designs</option>
+                <option value="PCBs">PCBs</option>
+                <option value="Mockups">Mockups</option>
+                <option value="Parts">Parts</option>
+              </select>
+            </div>
+
+            <div class="filter-item">
+              <label for="tag">Tag</label>
+              <select id="tag" class="form-select">
+                <option value="">All Tags</option>
+                <option value="PCB">PCB</option>
+                <option value="BMS">BMS</option>
+                <option value="Battery">Battery</option>
+                <option value="Protection">Protection</option>
+                <option value="Arduino">Arduino</option>
+                <option value="Testing">Testing</option>
+                <option value="Control">Control</option>
+                <option value="Welding">Welding</option>
+                <option value="Isolation">Isolation</option>
+                <option value="Safety">Safety</option>
+                <option value="Assembly">Assembly</option>
+                <option value="Workstation">Workstation</option>
+                <option value="Tools">Tools</option>
+                <option value="Reflow">Reflow</option>
+                <option value="Temperature">Temperature</option>
+                <option value="SMD">SMD</option>
+                <option value="Characterization">Characterization</option>
+                <option value="Data">Data</option>
+                <option value="CAD">CAD</option>
+                <option value="3D Print">3D Print</option>
+                <option value="Design">Design</option>
+                <option value="Mechanical">Mechanical</option>
+                <option value="Schematic">Schematic</option>
+                <option value="Render">Render</option>
+                <option value="3D">3D</option>
+                <option value="Visualization">Visualization</option>
+                <option value="18650">18650</option>
+                <option value="Lithium">Lithium</option>
+                <option value="Components">Components</option>
+                <option value="Nickel">Nickel</option>
+                <option value="Strips">Strips</option>
+                <option value="MOSFET">MOSFET</option>
+                <option value="Power">Power</option>
+                <option value="Electronics">Electronics</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="filter-results">
+            <span class="results-count">Showing 10 of 10 images</span>
+            <button class="btn btn-outline btn-sm" id="clearFilters">
+              Clear All Filters
+            </button>
+          </div>
+        </div>
+
+        <!-- Image Grid -->
+        <div class="gallery-grid" id="gallery-grid">
+          <!-- Gallery items will be loaded dynamically -->
+        </div>
+
+        <!-- Summary Stats -->
+        <div class="stats-section">
+          <div class="stats-grid">
+            <div class="stat-item">
+              <div class="stat-number">10</div>
+              <div class="stat-label">Total Images</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">3</div>
+              <div class="stat-label">Categories</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">10</div>
+              <div class="stat-label">Currently Showing</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Fullscreen Modal -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+      <div class="modal-content" onclick="event.stopPropagation()">
+        <button class="modal-close" onclick="closeModal()" aria-label="Close">
+          <svg
+            class="icon"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            ></path>
+          </svg>
+        </button>
+
+        <img id="modalImage" src="" alt="" class="modal-image" />
+
+        <div class="modal-info">
+          <h3 id="modalTitle" class="modal-title"></h3>
+          <p id="modalDescription" class="modal-description"></p>
+
+          <div class="modal-actions">
+            <div id="modalTags" class="modal-tags"></div>
+            <button id="modalDownload" class="btn btn-outline btn-sm">
+              <svg
+                class="icon"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                ></path>
+              </svg>
+              Download
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-grid">
+          <div class="footer-section">
+            <h3 class="footer-title">Rasil's Projects</h3>
+            <p class="footer-description">
+              Designing and building lithium-ion battery packs, PCBs, custom
+              tools, and electronics projects. Documenting the journey from
+              concept to creation.
+            </p>
+          </div>
+
+          <div class="footer-section">
+            <h4 class="footer-heading">Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="about.html">About</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h4 class="footer-heading">Technologies</h4>
+            <ul class="footer-tech">
+              <li>Lithium-ion Battery Design</li>
+              <li>PCB Design & Manufacturing</li>
+              <li>3D Modeling & Printing</li>
+              <li>Reflow Oven Construction</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p class="footer-copyright">
+            © 2024 Rasil's Projects. Built for showcasing hardware projects.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="gallery.js"></script>
+  </body>
+</html>

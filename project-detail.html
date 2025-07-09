@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Detail - Rasil's Projects</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="header-container">
+        <div class="header-top">
+          <a href="index.html" class="logo">
+            <div class="logo-icon">RP</div>
+            <span class="logo-text">Rasil's Projects</span>
+          </a>
+          <button class="mobile-menu" aria-label="Menu">
+            <svg
+              class="icon"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <nav class="nav">
+          <ul class="nav-list">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li>
+              <a href="projects.html" class="nav-link active">Projects</a>
+            </li>
+            <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb">
+        <a href="index.html">Home</a> / <a href="projects.html">Projects</a> /
+        <span id="project-breadcrumb">Project Detail</span>
+      </nav>
+
+      <div class="project-detail-content">
+        <!-- Project Header -->
+        <div class="project-header">
+          <img id="project-cover" src="" alt="" class="project-cover-image" />
+          <div class="project-header-content">
+            <h1 id="project-title" class="project-detail-title"></h1>
+            <p id="project-description" class="project-detail-description"></p>
+
+            <div class="project-meta-info">
+              <div class="meta-row">
+                <div class="meta-item">
+                  <span class="meta-label">Status:</span>
+                  <span id="project-status" class="badge"></span>
+                </div>
+                <div class="meta-item">
+                  <span class="meta-label">Category:</span>
+                  <span id="project-category"></span>
+                </div>
+              </div>
+
+              <div class="meta-row">
+                <div class="meta-item">
+                  <span class="meta-label">Started:</span>
+                  <span id="project-start-date"></span>
+                </div>
+                <div
+                  class="meta-item"
+                  id="completed-date-container"
+                  style="display: none"
+                >
+                  <span class="meta-label">Completed:</span>
+                  <span id="project-completed-date"></span>
+                </div>
+              </div>
+
+              <div class="meta-row">
+                <div class="meta-item">
+                  <span class="meta-label">Reading time:</span>
+                  <span id="project-reading-time"></span>
+                </div>
+              </div>
+            </div>
+
+            <div id="project-tags" class="project-detail-tags"></div>
+          </div>
+        </div>
+
+        <!-- Project Content -->
+        <div class="project-detail-body">
+          <div class="project-main-content">
+            <div id="project-details" class="project-content-section"></div>
+          </div>
+
+          <div class="project-sidebar">
+            <!-- Technologies -->
+            <div class="sidebar-section">
+              <h3 class="sidebar-title">Technologies</h3>
+              <ul id="project-technologies" class="sidebar-list"></ul>
+            </div>
+
+            <!-- Challenges -->
+            <div class="sidebar-section">
+              <h3 class="sidebar-title">Key Challenges</h3>
+              <ul id="project-challenges" class="sidebar-list"></ul>
+            </div>
+
+            <!-- Outcomes -->
+            <div class="sidebar-section">
+              <h3 class="sidebar-title">Outcomes</h3>
+              <ul id="project-outcomes" class="sidebar-list"></ul>
+            </div>
+
+            <!-- Related Projects -->
+            <div
+              id="related-projects-section"
+              class="sidebar-section"
+              style="display: none"
+            >
+              <h3 class="sidebar-title">Related Projects</h3>
+              <div id="related-projects" class="related-projects"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image Gallery -->
+        <div
+          id="project-gallery-section"
+          class="project-gallery-section"
+          style="display: none"
+        >
+          <h2 class="section-title">Project Gallery</h2>
+          <div id="project-gallery" class="project-gallery"></div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="project-navigation">
+          <a href="projects.html" class="btn btn-outline">
+            <svg
+              class="icon icon-mr"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M10 19l-7-7m0 0l7-7m-7 7h18"
+              ></path>
+            </svg>
+            Back to Projects
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-grid">
+          <div class="footer-section">
+            <h3 class="footer-title">Rasil's Projects</h3>
+            <p class="footer-description">
+              Designing and building lithium-ion battery packs, PCBs, custom
+              tools, and electronics projects. Documenting the journey from
+              concept to creation.
+            </p>
+          </div>
+
+          <div class="footer-section">
+            <h4 class="footer-heading">Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="about.html">About</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h4 class="footer-heading">Technologies</h4>
+            <ul class="footer-tech">
+              <li>Lithium-ion Battery Design</li>
+              <li>PCB Design & Manufacturing</li>
+              <li>3D Modeling & Printing</li>
+              <li>Reflow Oven Construction</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p class="footer-copyright">
+            © 2024 Rasil's Projects. Built for showcasing hardware projects.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="project-detail.js"></script>
+  </body>
+</html>
